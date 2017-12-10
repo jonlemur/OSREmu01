@@ -18,12 +18,11 @@ function love.resize(w, h)
   centerX = love.graphics.getWidth( ) / 2 / zoom
   centerY = love.graphics.getHeight( ) / 2 / zoom
 
-  debug = (tostring(zoom))
-  debug2 = (tostring(zoomH))
 end
 
 function love.mousepressed(x, y, button, istouch)
-	cGenW.nameLabel:clicked(x,y, zoom)
+  cGenW:mClick(x,y, zoom)
+  debug = (tostring(cGenW.strength))
 end
 
 function love.keypressed(key)
@@ -38,8 +37,6 @@ end
 
 function love.mousemoved(x, y, dx, dy)
 	cGenW:mouseMove(x,y,zoom)
-	debug = (tostring(y))
-	debug2 = (tostring(x))
 end
 
 function love.draw()
